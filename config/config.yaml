@@ -1,0 +1,9 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  s3_bucket_name: my-textsummarizer
+  input_key: samsum_dataset/train
+  output_key: samsum_dataset/processed/summary.arrow
+  local_data_file: artifacts/data_ingestion/text_data.arrow
+

@@ -8,3 +8,9 @@ class DataIngestionConfig:
     input_key: str
     output_key: str
     local_data_file: Path
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    status_file: str
+    all_required_files: list

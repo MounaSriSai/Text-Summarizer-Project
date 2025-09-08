@@ -18,10 +18,6 @@ class DataIngestion:
                 "train": f"s3://{self.config.s3_bucket_name}/samsum_dataset/train/data-00000-of-00001.arrow",
                 "validation": f"s3://{self.config.s3_bucket_name}/samsum_dataset/validation/data-00000-of-00001.arrow",
                 "test": f"s3://{self.config.s3_bucket_name}/samsum_dataset/test/data-00000-of-00001.arrow"
-            },
-            storage_options={
-                "key": os.environ.get("AWS_ACCESS_KEY_ID"),
-                "secret": os.environ.get("AWS_SECRET_ACCESS_KEY")
             }
         )
         logger.info(f"Dataset loaded with splits: {dataset.keys()}")

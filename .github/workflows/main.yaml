@@ -62,7 +62,7 @@ jobs:
           
   continuous_deployment:
     name: Continuous Deployment
-    needs: build_and_push_ecr_image
+    needs: build-and-push-ecr-image
     runs-on: self-hosted
     steps:
       - name: Checkout
